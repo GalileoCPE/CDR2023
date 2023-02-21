@@ -4,7 +4,7 @@
 
 ## II/ Conception du Robot
 <div style="text-align:center">
-    <img src="Conception_Robot.png" >
+    <img src="Conception_Robot.png" alt="Conception du Robot">
     <figcaption>Conception du Robot</figcaption>
 </div>
 

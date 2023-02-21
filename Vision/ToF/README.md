@@ -3,16 +3,6 @@ Ce repertoire contient le code de dévelopement de la partie basse de la vision 
 
 Pour la vision nous superposons les points obtenues par un LIDAR(partie haute) et les points obtenues par le ALIDARX(partie basse).
 
-## **Le ALIDARX**
-Le ALIDARX est composé de 6 ToF(Time of Flight) ici des `VL53L7CX` et d'une `STM32-F401RE`.
-
-Les ToF sont disposés sur le robot de façon à couvrir 360°.
-
-<div style="text-align:center">
-    <img src="LidarUsingVL53L7/ToF_NumberSensor.png" width="350" >
-    <figcaption>Disposition des ToF sur le robot</figcaption>
-</div>
-
 ### **Capteur VL53L7CX**
 <div style="text-align:center">
     <img src="LidarUsingVL53L7/vl53l7cx(1).jpg" height="150" >
@@ -31,8 +21,23 @@ Le capteur de distance multi-zone 8x8 à temps de vol (Time-of-Flight) avec un c
 | Fréquence infrarouge | 940 nm |
 | Température de fonctionnement | -30 to 85 °C |
 
-
 <div style="text-align:center">
     <img src="LidarUsingVL53L7/ZoneMapping8x8.png" width="350" >
     <figcaption>Zone Mapping 8x8</figcaption>
 </div>
+
+## **Le ALIDARX**
+Le ALIDARX est composé de 6 ToF(Time of Flight) ici des `VL53L7CX` et d'une `STM32-F401RE`.
+
+Les ToF sont disposés sur le robot de façon à couvrir 360°.
+
+<div style="text-align:center">
+    <img src="LidarUsingVL53L7/ToF_NumberSensor.png" width="350" >
+    <figcaption>Disposition des ToF sur le robot</figcaption>
+</div>
+
+Zone morte - couloirs de X mm de largeur
+Il faut un angle de 3°, ainsi 
+``
+tan(3°)=/
+``
