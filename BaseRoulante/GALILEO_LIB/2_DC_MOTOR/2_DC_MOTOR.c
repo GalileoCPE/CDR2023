@@ -17,6 +17,30 @@
 #include "../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
 TIM_HandleTypeDef htim1;
 
+void DC_MOTORS_move(uint8_t au8_DIR, uint16_t au16_SPEED)
+{
+	DC_MOTOR_1_Start(au8_DIR, au16_SPEED);
+	DC_MOTOR_2_Start(au8_DIR, au16_SPEED);
+}
+
+void DC_MOTORS_turn(uint8_t au8_DIR, uint16_t au16_SPEED)
+{
+	if (au8_DIR == DIR_R){
+		DC_MOTOR_1_Start(DIR_FW, au16_SPEED);
+		DC_MOTOR_2_Start(DIR_BW, au16_SPEED);
+	}else{
+		DC_MOTOR_1_Start(DIR_BW, au16_SPEED);
+		DC_MOTOR_2_Start(DIR_FW, au16_SPEED);
+	}
+
+}
+
+void DC_MOTORS_stop()
+{
+	DC_MOTOR_1_Stop();
+	DC_MOTOR_2_Stop();
+}
+
 void DC_MOTORS_Init(TIM_HandleTypeDef h)
 {
 	htim1 = h;
