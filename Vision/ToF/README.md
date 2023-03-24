@@ -1,10 +1,5 @@
 # Galileo
 Ce repertoire contient le code de dévelopement de la partie basse de la vision du robot pour la coupe de France de Robotique.
-`test`
-``test``
-```test```
-````test````
-
 
 Pour la vision nous superposons les points obtenues par un LIDAR(partie haute) et les points obtenues par le ALIDARX(partie basse).
 
@@ -42,7 +37,10 @@ Les ToF sont disposés sur le robot de façon à couvrir 360°.
 </div>
 
 Zone morte - couloirs de X mm de largeur
-Il faut un angle de 3°, ainsi 
-``
-tan(3°)=/
-``
+Il faut un angle de 3°, ainsi $tan(3°)=\frac{X}{coté_{hexagone} }$
+
+La base du robot est circulaire de rayon, `r`. L'hexagone inscrit dans ce cercle à son coté de taille $coté_{hexagone} = r - offset$ .
+
+| Le capteur est placé horizontalement ainsi les lignes/colonnes sont inversés. | <img src="LidarUsingVL53L7/vl53l7cx(2).webp" width="150" > |
+|-|-|
+Pour que le ToF mesure horizontalement, on utilise la 4ème ligne donc la 4ème colonne. Ce seront les cases, `[3,11,19,27,35,43,51,59]`.
