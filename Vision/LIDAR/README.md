@@ -1,4 +1,4 @@
-<img src="/images/galileo_logo.jpg" align="right" width="300" alt="header pic"/>
+<img src="./images/galileo_logo.jpg" align="right" width="300" alt="header pic"/>
 
 # Lidar French Robotics Cup 2023
 

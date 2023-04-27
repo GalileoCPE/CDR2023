@@ -109,7 +109,7 @@ def update_matplotlib(i,zones,values):
 
 ser = Serial()
 ser.baudrate = 460800 # standard Baudrate for STM32F4 devices
-ser.port = 'COM5'
+ser.port = 'COM3'
 ser.bytesize=8
 ser.parity='N'
 ser.stopbits=1
